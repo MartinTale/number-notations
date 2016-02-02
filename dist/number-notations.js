@@ -102,11 +102,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	      return getAmericanSimplifiedNotation(exp, 1);
 	    case 3:
 	      return getAbbreviatedNumberNotation(exp);
-	    case 4:
-	      for (var i = 0; i < 350; i++) {
-	        console.log(i, getNumberNotation(i, 0), getNumberNotation(i, 1), getNumberNotation(i, 2), getNumberNotation(i, 3));
-	      }
-	      break;
 	  }
 	};
 
