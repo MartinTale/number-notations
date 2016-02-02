@@ -16,10 +16,10 @@ Exponent has to be an integer.
 
     getNumberNotation(exponent, method)
 
-    0 - Scientific Notation
-    1 - American Simplified Notation
-    2 - American Simplified Notation With Capital Letters
-    3 - Abbreviated Number Notation
+    0 - Scientific Notation - e15, e16, e17
+    1 - American Simplified Notation - aa, bb, cc .. aaa, bbb, ccc .. aaaa, bbbb, cccc
+    2 - American Simplified Notation With Capital Letters - aa, bb, cc .. AA, BB, CC .. aaa, bbb, ccc
+    3 - Abbreviated Number Notation - Qa, Qi, Sx, Sp, Oc, No
 
 **Examples:**
 
