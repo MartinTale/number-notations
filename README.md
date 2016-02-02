@@ -23,6 +23,8 @@ Exponent has to be an integer.
 
 **Examples:**
 
+    var getNumberNotation = require('number-notations');
+
     getNumberNotation(32, 0)  // e32
     getNumberNotation(32, 1)  // ff
     getNumberNotation(32, 2)  // ff
@@ -32,6 +34,10 @@ Exponent has to be an integer.
     getNumberNotation(110, 1) // fff
     getNumberNotation(110, 2) // FF
     getNumberNotation(110, 3) // Qitg
+
+## Release History
+
+* 0.1.0 Initial release
 
 ## License
 
