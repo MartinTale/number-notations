@@ -90,6 +90,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 	};
 
+	var normalNmberDictionary = ['', 'thousand', 'million', 'billion', 'trillion', 'quadrillion', 'quintillion', 'sextillion', 'septillion', 'octillion', 'nonillion', 'decillion', 'undecillion', 'duodecillion', 'tredecillion', 'quattuordecillion', 'quindecillion', 'sexdecillion', 'septendecillion', 'octodecillion', 'novemdecillion', 'vigintillion', 'unvigintillion', 'duovigintillion', 'trevigintillion', 'quattuorvigintillion', 'quinvigintillion', 'sexvigintillion', 'septenvigintillion', 'octovigintillion', 'novemvigintillion', 'trigintillion', 'untrigintillion', 'duotrigintillion', 'trestrigintillion', 'quattuortrigintillion', 'quinquatrigintillion', 'sextrigintillion', 'septentrigintillion', 'octotrigintillion', 'noventrigintillion', 'quadragintillion', 'unquadragintillion', 'duoquadragintillion', 'tresquadragintillion', 'quattuorquadragintillion', 'quinquaquadragintillion', 'sexquadragintillion', 'septenquadragintillion', 'octoquadragintillion', 'novemquadragintillion', 'quinquagintillion', 'unquinquagintillion', 'duoquinquagintillion', 'trequinquagintillion', 'quattuorquinquagintillion', 'quinquinquagintillion', 'sexquinquagintillion', 'septenquinquagintillion', 'octoquinquagintillion', 'novemquinquagintillion', 'sexagintillion', 'unsexagintillion', 'duosexagintillion', 'tresexagintillion', 'quattuorsexagintillion', 'quinsexagintillion', 'sexsexagintillion', 'septensexagintillion', 'octosexagintillion', 'novemsexagintillion', 'septuagintillion', 'unseptuagintillion', 'duoseptuagintillion', 'treseptuagintillion', 'quattuorseptuagintillion', 'quinseptuagintillion', 'sexseptuagintillion', 'septenseptuagintillion', 'octoseptuagintillion', 'novemseptuagintillion', 'octogintillion', 'unoctogintillion', 'duooctogintillion', 'treoctogintillion', 'quattuoroctogintillion', 'quinoctogintillion', 'sexoctogintillion', 'septenoctogintillion', 'octooctogintillion', 'novemoctogintillion', 'nonagintillion', 'unnonagintillion', 'duononagintillion', 'trenonagintillion', 'quattuornonagintillion', 'quinnonagintillion', 'sexnonagintillion', 'septennonagintillion', 'octononagintillion', 'novemnonagintillion', 'centillion', 'uncentillion', 'duocentillion', 'trecentillion', 'quattuorcentillion', 'quincentillion', 'sexcentillion', 'septencentillion', 'octocentillion', 'novemcentillion'];
+	var normalNmberDictionaryCount = normalNmberDictionary.length;
+
+	var getNormalNumberNotation = function getNormalNumberNotation(exp) {
+	  var exp3 = Math.floor(Math.abs(exp) / 3);
+	  if (exp > 0 && exp3 < normalNmberDictionaryCount) {
+	    return normalNmberDictionary[exp3];
+	  } else {
+	    return getScientificNotation(exp);
+	  }
+	};
+
 	var getNumberNotation = function getNumberNotation(exp) {
 	  var notation = arguments.length <= 1 || arguments[1] === undefined ? 0 : arguments[1];
 
@@ -102,6 +114,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	      return getAmericanSimplifiedNotation(exp, 1);
 	    case 3:
 	      return getAbbreviatedNumberNotation(exp);
+	    case 4:
+	      return getNormalNumberNotation(exp);
 	  }
 	};
 
