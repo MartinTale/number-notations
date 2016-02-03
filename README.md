@@ -20,6 +20,7 @@ Exponent has to be an integer.
     1 - American Simplified Notation - aa, bb, cc .. aaa, bbb, ccc .. aaaa, bbbb, cccc
     2 - American Simplified Notation With Capital Letters - aa, bb, cc .. AA, BB, CC .. aaa, bbb, ccc
     3 - Abbreviated Number Notation - Qa, Qi, Sx, Sp, Oc, No
+    4 - Normal Number Notation - thousand, million, billion, trillion
 
 **Examples:**
 
@@ -29,11 +30,13 @@ Exponent has to be an integer.
     getNumberNotation(32, 1)  // ff
     getNumberNotation(32, 2)  // ff
     getNumberNotation(32, 3)  // No
+    getNumberNotation(32, 3)  // nonillion
 
     getNumberNotation(110, 0) // e110
     getNumberNotation(110, 1) // fff
     getNumberNotation(110, 2) // FF
     getNumberNotation(110, 3) // Qitg
+    getNumberNotation(110, 3) // quinquatrigintillion
 
 ## Release History
 
