@@ -40,6 +40,8 @@ Exponent has to be an integer.
 
 ## Release History
 
+* 0.1.1 Normal Number Notation
+
 * 0.1.0 Initial release
 
 ## License
