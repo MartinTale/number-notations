@@ -69,11 +69,11 @@ var getNormalNumberNotation = function (exp) {
   }
 };
 
-var getAmericanSimplifiedNotationNoCaps = function () {
+var getAmericanSimplifiedNotationNoCaps = function (exp) {
   return getAmericanSimplifiedNotation(exp, 0)
 }
 
-var getAmericanSimplifiedNotationCaps = function () {
+var getAmericanSimplifiedNotationCaps = function (exp) {
   return getAmericanSimplifiedNotation(exp, 1)
 }
 
