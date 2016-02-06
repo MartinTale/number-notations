@@ -69,6 +69,14 @@ var getNormalNumberNotation = function (exp) {
   }
 };
 
+var getAmericanSimplifiedNotationNoCaps = function () {
+  return getAmericanSimplifiedNotation(exp, 0)
+}
+
+var getAmericanSimplifiedNotationCaps = function () {
+  return getAmericanSimplifiedNotation(exp, 1)
+}
+
 var getNumberNotation = function (exp, notation = 0) {
   switch (notation) {
     case 0:
@@ -84,4 +92,11 @@ var getNumberNotation = function (exp, notation = 0) {
   }
 };
 
-module.exports = getNumberNotation;
+module.exports = {
+  getNumberNotation: getNumberNotation,
+  getScientific: getScientificNotation,
+  getAmericanSimplified: getAmericanSimplifiedNotationNoCaps,
+  getAmericanSimplifiedWithCaps: getAmericanSimplifiedNotationCaps,
+  getAbbreviated: getAbbreviatedNumberNotation,
+  getNormal: getNormalNumberNotation
+};

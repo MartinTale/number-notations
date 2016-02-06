@@ -102,6 +102,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 	};
 
+	var getAmericanSimplifiedNotationNoCaps = function getAmericanSimplifiedNotationNoCaps() {
+	  return getAmericanSimplifiedNotation(exp, 0);
+	};
+
+	var getAmericanSimplifiedNotationCaps = function getAmericanSimplifiedNotationCaps() {
+	  return getAmericanSimplifiedNotation(exp, 1);
+	};
+
 	var getNumberNotation = function getNumberNotation(exp) {
 	  var notation = arguments.length <= 1 || arguments[1] === undefined ? 0 : arguments[1];
 
@@ -119,7 +127,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 	};
 
-	module.exports = getNumberNotation;
+	module.exports = {
+	  getNumberNotation: getNumberNotation,
+	  getScientific: getScientificNotation,
+	  getAmericanSimplified: getAmericanSimplifiedNotationNoCaps,
+	  getAmericanSimplifiedWithCaps: getAmericanSimplifiedNotationCaps,
+	  getAbbreviated: getAbbreviatedNumberNotation,
+	  getNormal: getNormalNumberNotation
+	};
 
 /***/ }
 /******/ ])

@@ -1,6 +1,6 @@
 {
   "name": "number-notations",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Generate a string of a number with appended notation of choice",
   "main": "dist/number-notations.js",
   "scripts": {

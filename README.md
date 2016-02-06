@@ -22,23 +22,37 @@ Exponent has to be an integer.
     3 - Abbreviated Number Notation - Qa, Qi, Sx, Sp, Oc, No
     4 - Normal Number Notation - thousand, million, billion, trillion
 
+    getScientific(exponent)
+    getAmericanSimplified(exponent)
+    getAmericanSimplifiedWithCaps(exponent)
+    getAbbreviated(exponent)
+    getNormal(exponent)
+
 **Examples:**
 
-    var getNumberNotation = require('number-notations');
+    var NumberNotation = require('number-notations');
 
-    getNumberNotation(32, 0)  // e32
-    getNumberNotation(32, 1)  // ff
-    getNumberNotation(32, 2)  // ff
-    getNumberNotation(32, 3)  // No
-    getNumberNotation(32, 3)  // nonillion
+    NumberNotation.getNumberNotation(32, 0)  // e32
+    NumberNotation.getNumberNotation(32, 1)  // ff
+    NumberNotation.getNumberNotation(32, 2)  // ff
+    NumberNotation.getNumberNotation(32, 3)  // No
+    NumberNotation.getNumberNotation(32, 3)  // nonillion
 
-    getNumberNotation(110, 0) // e110
-    getNumberNotation(110, 1) // fff
-    getNumberNotation(110, 2) // FF
-    getNumberNotation(110, 3) // Qitg
-    getNumberNotation(110, 3) // quinquatrigintillion
+    NumberNotation.getNumberNotation(110, 0) // e110
+    NumberNotation.getNumberNotation(110, 1) // fff
+    NumberNotation.getNumberNotation(110, 2) // FF
+    NumberNotation.getNumberNotation(110, 3) // Qitg
+    NumberNotation.getNumberNotation(110, 3) // quinquatrigintillion
+
+    NumberNotation.getScientific(110) // e110
+    NumberNotation.getAmericanSimplified(110) // fff
+    NumberNotation.getAmericanSimplifiedWithCaps(110) // FF
+    NumberNotation.getAbbreviated(110) // Qitg
+    NumberNotation.getNormal(110) // quinquatrigintillion
 
 ## Release History
+
+* 0.2.0 Added more readable method names
 
 * 0.1.2 Fixed npm package
 
