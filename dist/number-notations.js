@@ -102,11 +102,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 	};
 
-	var getAmericanSimplifiedNotationNoCaps = function getAmericanSimplifiedNotationNoCaps() {
+	var getAmericanSimplifiedNotationNoCaps = function getAmericanSimplifiedNotationNoCaps(exp) {
 	  return getAmericanSimplifiedNotation(exp, 0);
 	};
 
-	var getAmericanSimplifiedNotationCaps = function getAmericanSimplifiedNotationCaps() {
+	var getAmericanSimplifiedNotationCaps = function getAmericanSimplifiedNotationCaps(exp) {
 	  return getAmericanSimplifiedNotation(exp, 1);
 	};
 
