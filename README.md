@@ -36,19 +36,19 @@ Exponent has to be an integer.
     NumberNotation.getNumberNotation(32, 1)  // ff
     NumberNotation.getNumberNotation(32, 2)  // ff
     NumberNotation.getNumberNotation(32, 3)  // No
-    NumberNotation.getNumberNotation(32, 3)  // nonillion
+    NumberNotation.getNumberNotation(32, 4)  // nonillion
 
     NumberNotation.getNumberNotation(110, 0) // e110
     NumberNotation.getNumberNotation(110, 1) // fff
     NumberNotation.getNumberNotation(110, 2) // FF
     NumberNotation.getNumberNotation(110, 3) // Qitg
-    NumberNotation.getNumberNotation(110, 3) // quinquatrigintillion
+    NumberNotation.getNumberNotation(110, 4) // quinquatrigintillion
 
-    NumberNotation.getScientific(110) // e110
-    NumberNotation.getAmericanSimplified(110) // fff
+    NumberNotation.getScientific(110)                 // e110
+    NumberNotation.getAmericanSimplified(110)         // fff
     NumberNotation.getAmericanSimplifiedWithCaps(110) // FF
-    NumberNotation.getAbbreviated(110) // Qitg
-    NumberNotation.getNormal(110) // quinquatrigintillion
+    NumberNotation.getAbbreviated(110)                // Qitg
+    NumberNotation.getNormal(110)                     // quinquatrigintillion
 
 ## Release History
 
